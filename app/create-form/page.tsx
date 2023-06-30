@@ -1,4 +1,5 @@
 "use client";
+import { DraggableDateInput, DraggableDateTimeInput, DraggableEmailInput, DraggableTelIL, DraggableTextInput, DraggableTimeInput } from "@/components/draggableInputs";
 import {
   DateInput,
   DateTimeInput,
@@ -6,7 +7,7 @@ import {
   TelIL,
   TextInput,
   TimeInput,
-} from "@/components/Inputs";
+} from "@/components/inputs";
 
 import React, { BaseSyntheticEvent } from "react";
 
@@ -23,6 +24,12 @@ const page = () => {
       <TimeInput />
       <DateTimeInput />
       <DateInput />
+      <DraggableTelIL/>
+      <DraggableEmailInput/>
+      <DraggableTextInput/>
+      <DraggableTimeInput/>
+      <DraggableDateTimeInput/>
+      <DraggableDateInput/>
       <button type="submit">submit</button>
     </form>
   );
