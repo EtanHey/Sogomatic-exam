@@ -1,7 +1,7 @@
-
 import { LayoutProps } from "@/types";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Providers } from "@/components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body
         className={`${inter.className} scrollbar-none h-screen overflow-hidden bg-white`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
