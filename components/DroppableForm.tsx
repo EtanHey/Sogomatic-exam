@@ -8,7 +8,7 @@ const DroppableForm = () => {
   return (
     <div
       ref={setNodeRef}
-      className="h-[297mm] w-[210mm] scale-[0.7] pt-10 text-center text-titleColor outline-dashed"
+      className="h-[297mm] w-[210mm] scale-[0.7] z-20 pt-10 text-center text-titleColor outline-dashed"
     >
       <input
         className="w-fit bg-red-500 text-center ring-0"

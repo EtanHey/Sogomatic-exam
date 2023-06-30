@@ -1,13 +1,18 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import NewLabeledInput from "../NewInput";
-import { generateId } from "@/utils/helpers";
+
 import Draggable from "./Draggable";
 
-const DraggableEmailInput = () => {
-  const id = generateId();
+const DraggableEmailInput = ({
+  styles,
+  id,
+}: {
+  styles: CSSProperties;
+  id: string;
+}) => {
 
   return (
-    <Draggable id={id}>
+    <Draggable styles={styles} id={id}>
       <NewLabeledInput id={id} inputType="email" />
     </Draggable>
   );

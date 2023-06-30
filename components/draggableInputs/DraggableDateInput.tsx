@@ -1,13 +1,16 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import NewLabeledInput from "../NewInput";
 import Draggable from "./Draggable";
-import { generateId } from "@/utils/helpers";
 
-const DraggableDateInput = () => {
-
-  const id = generateId();
+const DraggableDateInput = ({
+  styles,
+  id,
+}: {
+  styles: CSSProperties;
+  id: string;
+}) => {
   return (
-    <Draggable id={id}>
+    <Draggable styles={styles} id={id}>
       <NewLabeledInput id={id} inputType="date" />
     </Draggable>
   );

@@ -1,11 +1,11 @@
-import DraggableTelIL from "./DraggableTelILInput";
+import DraggableTelILInput from "./DraggableTelILInput";
 import DraggableEmailInput from "./DraggableEmailInput";
 import DraggableTextInput from "./DraggableTextInput";
 import DraggableTimeInput from "./DraggableTimeInput";
 import DraggableDateInput from "./DraggableDateInput";
 import DraggableDateTimeInput from "./DraggableDateTimeInput";
 export {
-  DraggableTelIL,
+  DraggableTelILInput,
   DraggableEmailInput,
   DraggableTextInput,
   DraggableTimeInput,

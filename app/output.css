@@ -568,6 +568,10 @@ video {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .flex {
   display: flex;
 }

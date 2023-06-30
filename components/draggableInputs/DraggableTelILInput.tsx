@@ -1,13 +1,16 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import NewLabeledInput from "../NewInput";
-import { generateId } from "@/utils/helpers";
 import Draggable from "./Draggable";
 
-const DraggableTelILInput = () => {
-  const id = generateId();
-
+const DraggableTelILInput = ({
+  styles,
+  id,
+}: {
+  styles: CSSProperties;
+  id: string;
+}) => {
   return (
-    <Draggable id={id}>
+    <Draggable styles={styles} id={id}>
       <NewLabeledInput id={id} inputType="tel" />
     </Draggable>
   );

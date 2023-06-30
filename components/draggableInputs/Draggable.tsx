@@ -27,7 +27,7 @@ const Draggable = (props: DraggableProps) => {
     <div
       ref={setNodeRef}
       style={{ ...style }}
-      className="draggable"
+      className="z-10"
       {...listeners}
       {...attributes}
     >
