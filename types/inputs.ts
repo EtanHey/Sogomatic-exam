@@ -11,4 +11,5 @@ export type LabeledInputProps = {
 
 export type NewInputProps = {
   inputType: HTMLInputTypeAttribute;
+  id: string;
 };

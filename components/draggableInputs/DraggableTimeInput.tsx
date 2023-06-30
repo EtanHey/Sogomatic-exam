@@ -1,11 +1,28 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import NewLabeledInput from "../NewInput";
+import { generateId } from "@/utils/helpers";
+import Draggable from "./Draggable";
 
-const DraggableTimeInput = () => {
+const DraggableTimeInput = ({
+  styles,
+  draggable: { id },
+}: {
+  styles: CSSProperties;
+  draggable: {
+    id: string;
+    name: string;
+    position: {
+      x: number;
+      y: number;
+    };
+  };
+}) => {
+  // const id = generateId();
+
   return (
-    <>
-      <NewLabeledInput inputType="time" />
-    </>
+    <Draggable styles={styles} id={id}>
+      <NewLabeledInput id={id} inputType="time" />
+    </Draggable>
   );
 };
 

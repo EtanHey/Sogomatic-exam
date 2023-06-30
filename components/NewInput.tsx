@@ -1,15 +1,10 @@
 import { NewInputProps } from "@/types";
 import React from "react";
 
-const NewLabeledInput = ({ inputType }: NewInputProps) => {
-  const generateId = () => {
-    return (
-      "id-" + Date.now().toString(36) + Math.random().toString(36).substring(2)
-    );
-  };
-  const id = generateId();
+const NewLabeledInput = ({ inputType, id }: NewInputProps) => {
+  
   return (
-    <div className="flex w-fit scale-[0.7] flex-col gap-1 px-8 py-2 text-titleColor">
+    <div className="flex w-fit scale-[0.7] z-50 flex-col gap-1 px-8 py-2 text-titleColor">
       <input
         className="px-1 py-0.5"
         type="text"
