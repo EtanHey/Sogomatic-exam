@@ -9,9 +9,9 @@ const NewLabeledInput = ({ inputType }: NewInputProps) => {
   };
   const id = generateId();
   return (
-    <div className="flex w-fit flex-col gap-1 px-8 py-2 text-titleColor">
+    <div className="flex w-fit scale-[0.7] flex-col gap-1 px-8 py-2 text-titleColor">
       <input
-        className="py-0.5 px-1"
+        className="px-1 py-0.5"
         type="text"
         id={`${inputType}__title-${id}`}
         name={`${inputType}__title-${id}`}

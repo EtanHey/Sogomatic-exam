@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const CreateFormLayout = async ({ children }: LayoutProps) => {
-  return <main className="h-full bg-gray-400">{children}</main>;
+  return <main className="h-0 min-h-full overflow-y-clip bg-[#f6f6f6]">{children}</main>;
 };
 
 export default CreateFormLayout;
