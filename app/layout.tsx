@@ -14,7 +14,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} scrollbar-none h-screen overflow-hidden bg-white`}
+        className={`${inter.className} scrollbar-none h-screen overflow-clip bg-white`}
       >
         <Providers>{children}</Providers>
       </body>

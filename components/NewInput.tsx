@@ -1,25 +1,37 @@
+import {
+  updateInputsName,
+  selectInputsTitle,
+} from "@/features/formCreator/formCreatorSlice";
+import { useAppDispatch, useAppSelector } from "@/state/hooks";
 import { NewInputProps } from "@/types";
-import React, { useState } from "react";
+import React from "react";
 
-const NewLabeledInput = ({ inputType, id }: NewInputProps) => {
-  const [value, setValue] = useState("");
+const NewLabeledInput = ({ input }: NewInputProps) => {
+  const { type, id, position } = input;
+  const dispatch = useAppDispatch();
+  const currentInputsTitle =
+    useAppSelector((state) => selectInputsTitle(state, id)) || "";
   return (
     <>
       <input
         className="px-1 py-0.5"
         type="text"
-        id={`${inputType}__title-${id}`}
-        name={`${inputType}__title-${id}`}
-        placeholder={`${inputType} input title`}
-        value={value}
+        disabled={
+          position.x < 320 ||
+          position.x > 770 ||
+          position.y < 15 ||
+          position.y > 735
+        }
+        id={`${type}__title-${id}`}
+        name={`${type}__title-${id}`}
+        placeholder={`${type} input title`}
+        value={currentInputsTitle}
         onChange={(ev) => {
-          console.log(ev);
-
-          setValue(ev.target.value);
+          dispatch(updateInputsName({ title: ev.target.value, id: id }));
         }}
       />
       <p className="select-none bg-white text-center opacity-75">
-        {inputType} input
+        {type} input
       </p>
     </>
   );

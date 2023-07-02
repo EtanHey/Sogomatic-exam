@@ -10,7 +10,6 @@ type DraggableProps = {
 
 const Draggable = (props: DraggableProps) => {
   const { id, styles, children } = props;
-
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id,
     data: {},
@@ -23,7 +22,7 @@ const Draggable = (props: DraggableProps) => {
 
   return (
     <div ref={setNodeRef} style={{ ...style }} className="z-10">
-      <span className="flex w-fit scale-[0.7] flex-col gap-1 px-8 py-2 text-titleColor">
+      <span className="flex w-fit scale-[0.7] flex-col gap-1  text-titleColor">
         <button className="h-3 w-full bg-red-500" {...listeners} {...attributes} />
         {children}
       </span>

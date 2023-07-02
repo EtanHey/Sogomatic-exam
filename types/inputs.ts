@@ -1,3 +1,4 @@
+import { DraggableInput } from "@/features/formCreator/formCreator.types";
 import { HTMLInputTypeAttribute, InputHTMLAttributes } from "react";
 
 export type InputProps = { title?: string };
@@ -10,6 +11,5 @@ export type LabeledInputProps = {
 };
 
 export type NewInputProps = {
-  inputType: HTMLInputTypeAttribute;
-  id: string;
+  input: DraggableInput;
 };

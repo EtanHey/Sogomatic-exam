@@ -9,3 +9,23 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Input {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  type     String
+  position Position
+  Form     Form?    @relation(fields: [formId], references: [id])
+  formId   String?  @db.ObjectId
+}
+
+type Position {
+  x Int
+  y Int
+}
+
+model Form {
+  id     String  @id @default(auto()) @map("_id") @db.ObjectId
+  title  String
+  inputs Input[]
+}
