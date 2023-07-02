@@ -14,7 +14,7 @@ const NewLabeledInput = ({ input }: NewInputProps) => {
   return (
     <>
       <input
-        className="px-1 py-0.5"
+        className="px-1 py-0.5 "
         type="text"
         disabled={
           position.x < 320 ||
@@ -31,7 +31,7 @@ const NewLabeledInput = ({ input }: NewInputProps) => {
         }}
       />
       <p className="select-none bg-white text-center opacity-75">
-        {type} input
+        {type} input location
       </p>
     </>
   );
