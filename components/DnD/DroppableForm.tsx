@@ -19,7 +19,7 @@ const DroppableForm = () => {
       className="z-20 h-[297mm] w-[210mm] scale-[0.7] pt-10 text-center text-titleColor outline-dashed"
     >
       <input
-        className="w-fit bg-red-500 px-2 py-1 text-center ring-0"
+        className="w-fit bg-buttonFillNBorder/10 px-2 py-1 text-2xl text-center ring-0"
         type="text"
         placeholder="Form Title"
         id="form-title"

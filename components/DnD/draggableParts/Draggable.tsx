@@ -22,8 +22,12 @@ const Draggable = (props: DraggableProps) => {
 
   return (
     <div ref={setNodeRef} style={{ ...style }} className="z-10">
-      <span className="flex w-fit scale-[0.7] flex-col gap-1  text-titleColor">
-        <button className="h-3 w-full bg-red-500" {...listeners} {...attributes} />
+      <span className="flex w-fit scale-[0.7] flex-col gap-1 bg-white  text-buttonFillNBorder">
+        <button
+          className="h-5 w-full bg-buttonFillNBorder/50 cursor-grab active:cursor-grabbing"
+          {...listeners}
+          {...attributes}
+        />
         {children}
       </span>
     </div>

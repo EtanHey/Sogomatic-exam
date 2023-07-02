@@ -34,10 +34,6 @@ const DnDArea = ({ inputs }: { inputs: Array<Input> }) => {
   function handleDragMove(ev: DragMoveEvent) {}
   function handleDragEnd(ev: DragEndEvent) {
     dispatch(moveNewInput({ activeId: ev.active.id, delta: ev.delta }));
-    // const currentInput = inputStore.find((input) => input.id === ev.active.id);
-    // if (currentInput) {
-    //   dispatch(saveInputToForm(currentInput));
-    // }
   }
 
   const sensors = useSensors(

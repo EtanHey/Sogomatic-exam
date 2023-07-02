@@ -5,7 +5,6 @@ import React from "react";
 
 const page = async () => {
   const { inputs, error } = await getInputs();
-  console.log(inputs);
 
   if (error || inputs?.length === 0 || !inputs) {
     return <div>No inputs were found</div>;
@@ -13,7 +12,7 @@ const page = async () => {
     return (
       <div className="flex h-full w-min flex-row place-items-center text-textColor">
         <DnDArea inputs={inputs} />
-        {/* <UploadNewFormButton /> */}
+        <UploadNewFormButton />
       </div>
     );
   }

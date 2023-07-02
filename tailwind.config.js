@@ -17,6 +17,7 @@ module.exports = {
         textColor: "#767676",
         buttonLeftColor: "#46117d",
         buttonRightColor: "#f90968",
+        buttonFillNBorder:'#41117e'
       },
     },
   },
