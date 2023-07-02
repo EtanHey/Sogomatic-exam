@@ -6,8 +6,6 @@ export async function getInputs(): Promise<{
 }> {
   try {
     const inputs = await prisma.input.findMany();
-    console.log(inputs);
-
     return { inputs };
   } catch (error) {
     return { error };
