@@ -1,31 +1,22 @@
-"use client";
-import {
-  DateInput,
-  DateTimeInput,
-  EmailInput,
-  TelIL,
-  TextInput,
-  TimeInput,
-} from "@/components/Inputs";
+import DnDArea from "@/components/DnD/DnDArea";
+import UploadNewFormButton from "@/components/buttons/UploadFormButton";
+import { getInputs } from "@/lib/inputsCont";
+import React from "react";
 
-import React, { BaseSyntheticEvent } from "react";
+const page = async () => {
+  const { inputs, error } = await getInputs();
+  console.log(inputs);
 
-const page = () => {
-  const handleFormCreation = (event: BaseSyntheticEvent) => {
-    event.preventDefault();
-    console.log(event.target.elements);
-  };
-  return (
-    <form className="flex flex-wrap" onSubmit={handleFormCreation}>
-      <TelIL />
-      <EmailInput />
-      <TextInput />
-      <TimeInput />
-      <DateTimeInput />
-      <DateInput />
-      <button type="submit">submit</button>
-    </form>
-  );
+  if (error || inputs?.length === 0 || !inputs) {
+    return <div>No inputs were found</div>;
+  } else {
+    return (
+      <div className="flex h-full w-min flex-row place-items-center text-textColor">
+        <DnDArea inputs={inputs} />
+        {/* <UploadNewFormButton /> */}
+      </div>
+    );
+  }
 };
 
 export default page;
